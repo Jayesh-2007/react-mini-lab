@@ -2,22 +2,14 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
+import "./InfoBox.css";
 
-export default function Infobox() {
+export default function Infobox({Info}) {
   let INIT_IMG =
     "https://images.unsplash.com/photo-1680352267694-a7fd4c33d4e1?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
-  let Info = {
-    city: "Delhi",
-    feelsLike: 30.99,
-    humidity: 23,
-    temp: 32.82,
-    tempMax: 32.82,
-    tempMin: 32.82,
-    weather: "clear sky",
-  };
   return (
     <div className="InfoBox">
-      <h4>Weather Info-{Info.weather}</h4>
+      <div className="container">
       <Card sx={{ maxWidth: 345 }}>
         <CardMedia sx={{ height: 140 }} image={INIT_IMG} title="green iguana" />
         <CardContent>
@@ -33,6 +25,7 @@ export default function Infobox() {
           </Typography>
         </CardContent>
       </Card>
+      </div>
     </div>
   );
 }
